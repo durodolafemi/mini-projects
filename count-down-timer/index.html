@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.mjs" type="module" defer></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="">
+            <h2 class="title">Enter Your Count Down Time</h2>
+            <div class="times-wrapper">
+                <label for="hour-input-field" id="timer-input-wrapper">
+                    <input type="number" min="0" max="24" id="hour-input-field" value="00">
+                    <span>hr</span>
+                </label>
+                <span class="column">:</span>
+                <label for="minutes-input-field" id="timer-input-wrapper">
+                    <input type="number" min="0" max="60" id="minutes-input-field" value="00">
+                    <span>min</span>
+                </label>
+                <span class="column">:</span>
+                <label for="seconds-input-field" id="timer-input-wrapper">
+                    <input type="number" min="0" max="60" id="seconds-input-field" value="00">
+                    <span>sec</span>
+                </label>
+            </div>
+
+            <div class="count-down-wrapper">
+                <span class="count-down hour-count-down">00</span>
+                <span class="count-down-column ">:</span>
+                <span class="count-down minute-count-down">00</span>
+                <span class="count-down-column ">:</span>
+                <span class="count-down second-count-down">00</span>
+            </div>
+
+            <div class="counter-action-buttons">
+                <button class=" actions-button start-count-btn">Start</button>
+                <button class=" actions-button pause-count-btn" disabled>Pause</button>
+                <button class=" actions-button stop-count-btn" disabled>Stop</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="error-message"></div>
+
+    <div class="timeout-alert-message">
+        <img src="./assets/notification-bell.svg" alt="">
+        <span>Countdown Finished...</span>
+        <button id="close-alarm-message-btn">X</button>
+    </div>
+
+    <audio src="./assets/bell-of-promise.wav" id="alarm-audio" loop></audio>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Itc Avant Garde";
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.15;
+}
+
+body {
+    background-color: #476538;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.app-container {
+    background-color: #fff;
+    box-shadow: 15px 20px 20px rgba(0, 0, 0, .25);
+    width: 60rem;
+    height: 30rem;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.times-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+#timer-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    opacity: 1;
+}
+
+input {
+    width: 5rem;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 2.4rem;
+}
+
+.times-wrapper .column {
+    font-size: 2.4rem;
+}
+
+.count-down-wrapper {
+    margin: 1rem;
+    color: #476538;
+    margin: 2rem 0;
+}
+
+.count-down {
+    font-size: 7rem;
+}
+
+.count-down-column {
+    font-size: 7rem;
+}
+
+.actions-button {
+    background-color: #2C430E;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    margin: 0 .5rem;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.actions-button:disabled {
+    background-color: #92db3343;
+    cursor: not-allowed;
+}
+
+.error-message,
+.timeout-alert-message {
+    position: absolute;
+    width: 300px;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-size: 1.3rem;
+    display: none;
+}
+
+.error-message {
+    position: absolute;
+    top: 0;
+    background-color: #d33e10;
+
+}
+
+
+
+.timeout-alert-message {
+    top: 100px;
+    background-color: #2C430E;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timeout-alert-message img {
+    /* width: 30px; */
+    height: 20px;
+    margin: auto 1rem;
+}
+
+#close-alarm-message-btn {
+    font-size: 1rem;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    padding: .5rem .8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+
+/* Media Query */
+@media (max-width: 420px) {
+
+
+    .app-container {
+        height: auto;
+    }
+
+    .title {
+        font-size: 1.89em;
+    }
+
+    .count-down,
+    .count-down-column {
+        font-size: 5rem;
+    }
+
+    .actions-button {
+        padding: .5rem 1.5rem;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 285px) {
+
+    .count-down,
+    .count-down-column {
+        font-size: 3.5rem;
+    }
+
+    .actions-button {
+        margin: 1rem;
+    }
+}

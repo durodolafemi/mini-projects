@@ -1,0 +1,15 @@
+export default {
+  hoursInputElement: document.querySelector("#hour-input-field"),
+  minutesInputElement: document.querySelector("#minutes-input-field"),
+  secondsInputElement: document.querySelector("#seconds-input-field"),
+  hoursCountDownElement: document.querySelector(".hour-count-down"),
+  minutesCountDownElement: document.querySelector(".minute-count-down"),
+  secondsCountDownElement: document.querySelector(".second-count-down"),
+  startCountButton: document.querySelector(".start-count-btn"),
+  pauseCountButton: document.querySelector(".pause-count-btn"),
+  stopCountButton: document.querySelector(".stop-count-btn"),
+  alarmMessage: document.querySelector(".timeout-alert-message"),
+  alarmAudio: document.querySelector("#alarm-audio"),
+  closeAlarmAlertMessage: document.getElementById("close-alarm-message-btn"),
+  countdownIntervalTimer: null,
+};
